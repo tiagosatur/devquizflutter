@@ -2,6 +2,7 @@ import 'package:devquizflutter/home/widgets/appbar/appbar_widget.dart';
 import 'package:devquizflutter/home/widgets/level_button/level_button_widget.dart';
 import 'package:devquizflutter/home/widgets/quiz_card/quiz_card_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -42,15 +43,21 @@ class _HomePageState extends State<HomePage> {
               height: 24,
             ),
             Expanded(
-              child: GridView.count(
-                crossAxisSpacing: 16,
-                mainAxisSpacing: 16,
+              child: StaggeredGridView.count(
+                crossAxisSpacing: 13,
+                mainAxisSpacing: 13,
                 crossAxisCount: 2,
                 children: [
                   QuizCardWidget(),
                   QuizCardWidget(),
                   QuizCardWidget(),
                   QuizCardWidget(),
+                ],
+                staggeredTiles: [
+                  StaggeredTile.fit(1),
+                  StaggeredTile.fit(1),
+                  StaggeredTile.fit(1),
+                  StaggeredTile.fit(1),
                 ],
               )
               

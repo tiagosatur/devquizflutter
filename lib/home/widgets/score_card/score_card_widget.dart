@@ -17,7 +17,6 @@ class ScoreCardWidget extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: Row(
-            
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Expanded(
